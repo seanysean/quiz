@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: RGBa(0,0,0,0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+.popup {
+  position: fixed;
+  height: 130px;
+  width: 300px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  margin: -50px 0 0 -150px;
+  box-shadow: 0 0 50px #333;
+  text-align: center;
+  padding: 10px;
+}
+.popuptitle {
+  font-size: 25px;
+}
+.score {
+  font-weight: 900;
+}
+h1 {
+  text-align: center;
+  font-weight: 100;
+}
+.quizcontainer {
+  position: absolute;
+  box-shadow: 0 0 1px 3px RGBa(0,0,0,0.1);
+  width: 550px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.top {
+  color: #aaa;
+  font-weight: 100;
+}
+.question {
+  font-size: 20px;
+}
+.right {
+  float: right;
+}
+#qzdone {
+  margin-left: 10px;
+}
+.response {
+  padding: 20px 5px;
+}
+
+button {
+  background: linear-gradient(#fff,#f1f1f1);
+  cursor: pointer;
+  color: #999;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+button:hover {
+  background: #f8f8f8;
+}
+#start {
+  padding: 10px 20px;
+  font-size: 25px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The amazing quiz</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/dark.css" type="text/css" rel="stylesheet">
+  </head>
+  <body class="dark">
+    <div class="overlay">
+      <div class="popup">
+        <span class="popuptitle">The game has ended</span>
+        <p>Your score is <span class="score"></span></p>
+        <button id="playagain">Play again</button>
+      </div>
+    </div>
+    <h1>Chess quiz</h1>
+    <div class="quizcontainer">
+      <div class="top">
+        <span class="question">How many questions can you solve in 10s?</span>
+        <span class="right">Time:
+          <span id="time">10</span>
+          <span id="qzdone">0</span>
+        </span>
+      </div>
+      <div class="response">
+        <button id="start">Start quiz</button>
+      </div>
+    </div>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
