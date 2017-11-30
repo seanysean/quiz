@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
 * {
   box-sizing: border-box;
 }
@@ -8,6 +9,7 @@ body {
 }
 body {
   font-family: sans-serif;
+  color: #444;
 }
 .overlay {
   position: fixed;
@@ -23,12 +25,11 @@ body {
 }
 .popup {
   position: fixed;
-  height: 130px;
   width: 300px;
   background: #fff;
   left: 50%;
   top: 50%;
-  margin: -50px 0 0 -150px;
+  transform: translate(-50%,-50%);
   box-shadow: 0 0 50px #333;
   text-align: center;
   padding: 10px;
@@ -36,39 +37,31 @@ body {
 .popuptitle {
   font-size: 25px;
 }
-.score {
-  font-weight: 900;
-}
 h1 {
   text-align: center;
   font-weight: 100;
 }
-.quizcontainer {
+.theme {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  transition: 0.25s ease;
+  font-size: 30px !important;
+  cursor: pointer;
+}
+.theme::before {
   position: absolute;
-  box-shadow: 0 0 1px 3px RGBa(0,0,0,0.1);
-  width: 550px;
-  padding: 20px;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%,-50%);
 }
-.top {
-  color: #aaa;
-  font-weight: 100;
+.theme:hover {
+  box-shadow: 0 0 10px #777;
 }
-.question {
-  font-size: 20px;
-}
-.right {
-  float: right;
-}
-#qzdone {
-  margin-left: 10px;
-}
-.response {
-  padding: 20px 5px;
-}
-
 button {
   background: linear-gradient(#fff,#f1f1f1);
   cursor: pointer;
@@ -80,7 +73,51 @@ button {
 button:hover {
   background: #f8f8f8;
 }
-#start {
-  padding: 10px 20px;
-  font-size: 25px;
+.links {
+  padding: 5px 8px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #eee;
+  z-index: 2;
+  overflow: hidden;
+}
+.links::before {
+  content: "";
+  transition: 0.2s linear;
+  position: absolute;
+  background: #333;
+  height: 0;
+  width: 0;
+  display: block;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.links:hover::before {
+  height: 200px;
+  width: 200px;
+}
+.links:hover a {
+  color: #eee;
+}
+.links a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 13px;
+  color: #555;
+  font-weight: 100;
+  transition: 0.25s ease;
+  border-bottom: 1px solid transparent;
+  padding: 3px;
+}
+.links a:hover {
+  color: #aaa;
+  border-color: #777;
+}
+.links a:active {
+  color: #fff !important;
+  background: #777;
 }

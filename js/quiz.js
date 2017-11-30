@@ -22,7 +22,7 @@ const f = new Question('As late as 1561, Castling was two moves.',['true','false
 const z = new Question([Question]',['[Solution]',...(more options...)]);
 z is then added to the 'qa' array.*/
 
-let qa = [a,b,c,d,e];
+let qa = [a,b,c,d,e,f];
 
 const quiz = {
   q: document.querySelector('.question'),
@@ -32,6 +32,7 @@ const quiz = {
   a: null,
   score: 0,
   sHtml: document.querySelector('.score'),
+  hsHtml: document.querySelector('.highscore'),
   popup: document.querySelector('.overlay'),
   again: document.querySelector('#playagain'),
   time: 10,
@@ -80,6 +81,14 @@ const quiz = {
     this.popup.style.display = 'block';
     this.sHtml.innerHTML = this.score;
     this.again.addEventListener('click',()=>window.location.reload());
+    if (localStorage.getItem('high') === null) {
+      localStorage.setItem('high',this.score);
+    } else {
+      if (Number(localStorage.getItem('high') < this.score)) {
+        localStorage.setItem('high',this.score);
+      }
+    }
+    this.hsHtml.innerHTML = localStorage.getItem('high');
   }
 }
 

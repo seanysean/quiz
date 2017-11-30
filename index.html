@@ -5,16 +5,19 @@
     <title>The amazing quiz</title>
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href="css/dark.css" type="text/css" rel="stylesheet">
+    <link href="css/quiz.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body class="dark">
+  <body>
     <div class="overlay">
       <div class="popup">
         <span class="popuptitle">The game has ended</span>
-        <p>Your score is <span class="score"></span></p>
+        <p>Your score is <span class="score"></span>, and your highscore is <span class="highscore"></span>.</p>
         <button id="playagain">Play again</button>
       </div>
     </div>
     <h1>Chess quiz</h1>
+    <span class="fa fa-lightbulb-o theme"></span>
     <div class="quizcontainer">
       <div class="top">
         <span class="question">How many questions can you solve in 10s?</span>
@@ -27,6 +30,11 @@
         <button id="start">Start quiz</button>
       </div>
     </div>
+    <div class="links">
+      <a href="#" target="_blank">Contact</a>
+      <a href="https://github.com/seanysean/quiz" target="_blank">Open source</a>
+    </div>
+    <script src="js/bg.js"></script>
     <script src="js/quiz.js"></script>
   </body>
 </html>
