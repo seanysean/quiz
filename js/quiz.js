@@ -19,10 +19,11 @@ const e = new Question('Checkmate does not always immediately win the game',['fa
 const f = new Question('As late as 1561, Castling was two moves.',['true','false']);
 
 /*Syntax:
-const z = new Question([Question]',['[Solution]',...(more options...)]);
+const z = new Question('Question',['(Correct option)','...more options...']);
 z is then added to the 'qa' array.*/
 
 let qa = [a,b,c,d,e,f];
+let tick;
 
 const quiz = {
   q: document.querySelector('.question'),
@@ -35,15 +36,14 @@ const quiz = {
   hsHtml: document.querySelector('.highscore'),
   popup: document.querySelector('.overlay'),
   again: document.querySelector('#playagain'),
-  time: 10,
+  time: 30,
   tHtml: document.querySelector('#time'),
   start() {
-    let tick = setInterval(()=>{
+    tick = setInterval(()=>{
       this.time--;
       this.tHtml.innerHTML = this.time;
       if (this.time === 0) {
         this.end();
-        clearInterval(tick);
       }
     },1000);
     this.next();
@@ -69,6 +69,10 @@ const quiz = {
       qa.splice(qa.indexOf(qa[r]), 1);
       console.log(qa);
     }
+    else {
+      this.end();
+      alert('Well done! :D You completed all quiz questions. \n Would you like to contribute some? If so, \n you can PM me at lichess @seanysean, \n or go to contact.html. Thanks :)')
+    }
   },
   submit(input) {
     input === this.a?this.score++:this.score--;
@@ -78,17 +82,18 @@ const quiz = {
     console.log(this.score);
   },
   end() {
+    clearInterval(tick);
     this.popup.style.display = 'block';
     this.sHtml.innerHTML = this.score;
     this.again.addEventListener('click',()=>window.location.reload());
-    if (localStorage.getItem('high') === null) {
-      localStorage.setItem('high',this.score);
+    if (sessionStorage.getItem('high') === null) {
+      sessionStorage.setItem('high',this.score);
     } else {
-      if (Number(localStorage.getItem('high') < this.score)) {
-        localStorage.setItem('high',this.score);
+      if (Number(sessionStorage.getItem('high') < this.score)) {
+        sessionStorage.setItem('high',this.score);
       }
     }
-    this.hsHtml.innerHTML = localStorage.getItem('high');
+    this.hsHtml.innerHTML = sessionStorage.getItem('high');
   }
 }
 
