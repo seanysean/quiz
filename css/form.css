@@ -54,6 +54,7 @@ form label {
   left: 10%;
   transition: 0.25s ease;
   color: #555;
+  cursor: pointer;
 }
 form label[for="title"] {
   top: -30px;

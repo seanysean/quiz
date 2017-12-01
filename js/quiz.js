@@ -71,7 +71,7 @@ const quiz = {
     }
     else {
       this.end();
-      alert('Well done! :D You completed all quiz questions. \n Would you like to contribute some? If so, \n you can PM me at lichess @seanysean, \n or go to contact.html. Thanks :)')
+      alert('Well done! :D You completed all quiz questions.\nWould you like to contribute some? If so,\nyou can PM me at lichess @seanysean,\nor go to contact.html. Thanks :)')
     }
   },
   submit(input) {

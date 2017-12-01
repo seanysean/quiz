@@ -10,6 +10,7 @@ body {
 body {
   font-family: sans-serif;
   color: #444;
+  background: #fff;
 }
 .overlay {
   position: fixed;
@@ -62,6 +63,27 @@ h1 {
 .theme:hover {
   box-shadow: 0 0 10px #777;
 }
+.theme::after {
+  content: "Theme (t)";
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 14px !important;
+  background: RGBa(0,0,0,0.2);
+  padding: 3px;
+  height: 14px;
+  top: 110%;
+  width: 55px;
+  right: 6px;
+  border-radius: 5px;
+  transition: 0.25s ease;
+  transition-delay: 0.25s;
+  opacity: 0;
+  pointer-events: none;
+}
+.theme:hover::after {
+  opacity: 1;
+}
 button {
   background: linear-gradient(#fff,#f1f1f1);
   cursor: pointer;
@@ -86,7 +108,7 @@ button:hover {
   content: "";
   transition: 0.2s linear;
   position: absolute;
-  background: #333;
+  background: RGBa(0,0,0,0.1);
   height: 0;
   width: 0;
   display: block;
@@ -101,12 +123,12 @@ button:hover {
   width: 200px;
 }
 .links:hover a {
-  color: #eee;
+  color: #888;
 }
 .links a {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   color: #555;
   font-weight: 100;
   transition: 0.25s ease;
@@ -114,10 +136,49 @@ button:hover {
   padding: 3px;
 }
 .links a:hover {
-  color: #aaa;
+  color: #555;
   border-color: #777;
 }
 .links a:active {
-  color: #fff !important;
-  background: #777;
+  color: #555;
+  background: RGBa(205,205,205,0.3);
+}
+
+/*Dark styling*/
+
+body.dark {
+  background: #222;
+  color: #aaa;
+}
+body.dark .popup {
+  background: #333;
+}
+body.dark button {
+  border: 1px solid #444;
+  background: linear-gradient(#222,#2a2a2a);
+}
+body.dark button:hover {
+  background: #282828;
+}
+body.dark .links {
+  border-color: #444;
+}
+body.dark .links:hover a {
+  color: #555;
+}
+body.dark .links::before {
+  background: RGBa(205,205,205,0.1);
+}
+body.dark .links a {
+  color: #777;
+}
+body.dark .links a:hover {
+  color: #999;
+}
+body.dark .links a:active {
+  background: RGBa(0,0,0,0.3);
+  color: #fff;
+}
+body.dark .theme::after {
+  background: RGBa(205,205,205,0.2);
 }

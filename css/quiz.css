@@ -30,3 +30,12 @@
   padding: 10px 20px;
   font-size: 25px;
 }
+
+/*Dark styling*/
+
+body.dark .quizcontainer {
+  box-shadow: 0 0 1px 3px RGBa(205,205,205,0.1);
+}
+body.dark .top {
+  color: #777;
+}
