@@ -1,0 +1,41 @@
+.score,.highscore {
+  font-weight: 900;
+}
+.quizcontainer {
+  position: absolute;
+  box-shadow: 0 0 1px 3px RGBa(0,0,0,0.1);
+  width: 550px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.top {
+  color: #aaa;
+  font-weight: 100;
+}
+.question {
+  font-size: 20px;
+}
+.right {
+  float: right;
+}
+#qzdone {
+  margin-left: 10px;
+}
+.response {
+  padding: 20px 5px;
+}
+#start {
+  padding: 10px 20px;
+  font-size: 25px;
+}
+
+/*Dark styling*/
+
+body.dark .quizcontainer {
+  box-shadow: 0 0 1px 3px RGBa(205,205,205,0.1);
+}
+body.dark .top {
+  color: #777;
+}

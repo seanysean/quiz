@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact • [Uncomplete]Chess Quiz</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/form.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1>Contact</h1>
+    <span class="fa fa-lightbulb-o theme"></span>
+    <form action="https://lichess.org/inbox/new?username=seanysean" target="_blank" method="post">
+      <p class="note green">Note: you will need to be logged in to lichess to send your message.</p>
+      <div style="margin-top: 50px">
+        <input id="title" type="text" name="subject" minlength="3" maxlength="100" required/>
+        <label for="title">Title</label>
+        <i class="line"></i>
+      </div>
+      <div>
+        <textarea id="msg" name="text" required></textarea>
+        <label for="msg">Your message</label>
+        <i class="line"></i>
+      </div>
+      <button type="submit"><i class="fa fa-check"></i> Send</button>
+    </form>
+    <div class="links">
+      <a href="index.html" target="_blank">Play</a>
+      <a href="https://github.com/seanysean/quiz" target="_blank">Open source</a>
+    </div>
+    <script src="js/bg.js"></script>
+  </body>
+</html>
