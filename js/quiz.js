@@ -65,8 +65,8 @@ const quiz = {
       let r = Math.round(Math.random() * (qa.length - 1));
       this.q.innerHTML = qa[r].question;
       this.a = qa[r].answers[0];
-      for (i = qa[r].answers.length; i > 0; i--) {
-        let r2 = Math.floor(Math.random() * i);
+      for (iterator = qa[r].answers.length; iterator > 0; iterator--) {
+        let r2 = Math.floor(Math.random() * iterator);
         console.log(r2);
         let btn = document.createElement('BUTTON');
         btn.innerHTML = qa[r].answers[r2];
@@ -80,7 +80,7 @@ const quiz = {
     }
     else {
       this.end();
-      alert('Well done! :D You completed all quiz questions.\nWould you like to contribute some? If so,\nyou can PM me at lichess @seanysean,\nor go to contact.html. Thanks :)')
+      alert('Well done! :D You completed all quiz questions.\nWould you like to contribute some? If so,\nyou can PM me at lichess @seanysean,\nor go to contact.html. Thanks :)');
     }
   },
   submit(input) {
