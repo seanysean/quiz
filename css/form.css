@@ -4,20 +4,6 @@ form {
   padding: 20px;
   position: relative;
 }
-form .note {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  padding: 10px;
-}
-form .note.green {
-  background: #337733;
-}
-form .note.yellow {
-  background: #ccb613;
-}
-form .note.red {
-  background: #ce4f45;
-}
 form input, form textarea {
   background: transparent;
   border: none;
