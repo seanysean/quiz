@@ -18,19 +18,23 @@ const d = new Question('A knight is worth',['3 points','2 points','9 points']);
 const e = new Question('Checkmate does not always win the game',['false','true']);
 const f = new Question('As late as 1561, Castling was two moves.',['true','false']);
 const g = new Question('Was chess invented in the 1900s?',['No','Yes']);
+const h = new Question('Who was the World Blitz Champion in 2010?',['Aronian','Carlsen','Nakamura','Karjakin']);
 const i = new Question('Who was the world champion from 1972–1975?',['Fischer','Carlsen','Kasparov','Botvinnik','Spassky']);
 const j = new Question('Who was the world champion from 1969–1972?',['Spassky','Nakamura','Kasparov','Alekhine','Fischer']);
 const k = new Question('Steinitz is considered the first WCC',['true','false']);
 const l = new Question('Botvinnik was the first \'official\' GM of the USSR',['true','false']);
 const m = new Question('\'Super GM\' is a unoffical title',['true','false']);
 const n = new Question('Alekhine\'s defense is a opening that begins with',['1. e4 Nf6','1. d4 Nf6','1. h4 Nh6','1. e3 e6']);
-const o = new Question('Who was the 4<sup>th</sup> world champion?',['Alekhine','Carlsen','Euwe','Capablanca','Kasparov','Botvinnik']);
+const o = new Question('Who was the 4<sup>th</sup> world champion?',['Alekhine','Euwe','Capablanca','Kasparov','Botvinnik']);
+const p = new Question('In the first FIDE Olympiad, there were only 11 participating countries',['false','true']);
+const q = new Question('For a time, computers competed in human tournaments.',['true','false']);
+const r = new Question('In about 15% of Morphy\'s games, he gave odds.',['true','false']);
 
 /*Syntax:
 const z = new Question('Question',['(Correct option)','...more options...']);
 z is then added to the 'qa' array.*/
 
-let qa = [a,b,c,d,e,f,g,i,j,k,l,m,n,o];
+let qa = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r];
 let tick;
 
 const quiz = {
