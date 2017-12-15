@@ -1,0 +1,82 @@
+h2 {
+  text-align: center;
+  font-weight: 100;
+  margin: 50px 0 30px;
+}
+.container {
+  text-align: center;
+  /*Centers the .contributors*/
+  margin-top: 50px;
+}
+.contributor {
+  display: inline-block;
+  margin: 0 30px;
+  vertical-align: top;
+  min-width: 100px;
+  border: 1px solid transparent;
+  padding: 10px;
+  transition: 0.25s ease;
+}
+.contributor:hover {
+  border-color: #aaa;
+  background: RGBa(0,0,0,0.01);
+}
+.contributor a {
+  font-size: 15px;
+  color: #aaa;
+  text-decoration: none;
+  padding: 8px 3px;
+}
+.contributor a:hover {
+  color: #777;
+}
+.contributor hr {
+  border: 1px solid #ccc;
+}
+.contributor .contribution {
+  padding: 3px;
+  display: inline-block;
+  font-weight: 100;
+  border-radius: 3px;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  margin: 3px;
+  cursor: pointer;
+  vertical-align: top;
+}
+.contributor .contribution:hover {
+  padding: 4px 3px;
+  border-bottom: none;
+}
+.contributor .code {
+  background: #40c95a;
+  border-color: #15a417;
+}
+.contributor .quiz {
+  background: #2b9ae0;
+  border-color: #507bc8;
+}
+
+/*Dark styling*/
+
+body.dark .contributor:hover {
+  border-color: #555;
+  background: RGBa(205,205,205,0.01);
+}
+body.dark .contributor .code {
+  background: #309c44;
+  border-color: #136515;
+}
+body.dark .contributor .quiz {
+  background: #2182bf;
+  border-color: #005dff;
+}
+body.dark .contributor a {
+  color: #777;
+}
+body.dark .contributor a:hover {
+  color: #aaa;
+}
+body.dark .contributor hr {
+  border-color: #555;
+}

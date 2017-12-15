@@ -35,6 +35,13 @@ body {
   text-align: center;
   padding: 10px;
 }
+.popup a {
+  color: #767676;
+  text-decoration: none;
+}
+.popup a:hover {
+  text-decoration: underline;
+}
 .popuptitle {
   font-size: 25px;
 }
@@ -119,8 +126,8 @@ button:hover {
   border-radius: 50%;
 }
 .links:hover::before {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }
 .links:hover a {
   color: #888;
@@ -143,6 +150,21 @@ button:hover {
   color: #555;
   background: RGBa(205,205,205,0.3);
 }
+.note {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+}
+.note.green {
+  background: #5e9c5d;
+}
+.note.yellow {
+  background: #daca58;
+}
+.note.red {
+  background: #e78982;
+}
 
 /*Dark styling*/
 
@@ -152,6 +174,13 @@ body.dark {
 }
 body.dark .popup {
   background: #333;
+}
+body.dark .popup a {
+  color: #939393;
+  text-decoration: none;
+}
+body.dark .popup a:hover {
+  text-decoration: underline;
 }
 body.dark button {
   border: 1px solid #444;
@@ -164,7 +193,7 @@ body.dark .links {
   border-color: #444;
 }
 body.dark .links:hover a {
-  color: #555;
+  color: #888;
 }
 body.dark .links::before {
   background: RGBa(205,205,205,0.1);
@@ -181,4 +210,13 @@ body.dark .links a:active {
 }
 body.dark .theme::after {
   background: RGBa(205,205,205,0.2);
+}
+body.dark .note.green {
+  background: #337733;
+}
+body.dark .note.yellow {
+  background: #ccb613;
+}
+body.dark .note.red {
+  background: #ce4f45;
 }

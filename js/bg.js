@@ -1,6 +1,12 @@
 let bg = sessionStorage.getItem('bg');
 let inputBoxes = [document.getElementsByTagName('TEXTAREA')[0], document.getElementsByTagName('INPUT')[0]];
 
+let themeSwitcher = document.createElement('SPAN');
+themeSwitcher.classList.add('fa');
+themeSwitcher.classList.add('fa-lightbulb-o');
+themeSwitcher.classList.add('theme');
+document.body.append(themeSwitcher);
+
 if (bg === null) {
   sessionStorage.setItem('bg','light');
   bg = 'light';
@@ -13,13 +19,12 @@ if (bg === null) {
   }
 }
 
-const themeSwitcher = document.querySelector('.theme');
 document.body.addEventListener('keydown', e=>{
   if (e.key==='t' && e.target !== inputBoxes[0] && e.target !== inputBoxes[1]) {
     themeSwitcher.click();
   }
 });
-themeSwitcher.addEventListener('click',e=>{
+themeSwitcher.addEventListener('click',()=>{
   console.log(bg);
   if (bg === 'light') {
     document.body.classList.add('dark');
