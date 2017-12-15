@@ -29,12 +29,13 @@ const o = new Question('Who was the 4<sup>th</sup> world champion?',['Alekhine',
 const p = new Question('In the first FIDE Olympiad, there were only 11 participating countries',['false','true']);
 const q = new Question('For a time, computers competed in human tournaments.',['true','false']);
 const r = new Question('In about 15% of Morphy\'s games, he gave odds.',['true','false']);
+const s = new Question('What color is g6?',['light','dark']);
 
 /*Syntax:
 const z = new Question('Question',['(Correct option)','...more options...']);
-z is then added to the 'qa' array.*/
+z is then manually added to the 'qa' array.*/
 
-let qa = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r];
+let qa = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s];
 let tick;
 
 const quiz = {

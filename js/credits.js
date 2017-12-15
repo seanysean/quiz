@@ -21,9 +21,16 @@ function popup(a) {
 
 const contributors = {
   seanysean: {
-    name: 'seanysean',
+    name: 'Sean B',
+    username: 'seanysean',
     profile: 'https://lichess.org/@/seanysean',
     contributions: ['code','quiz']
+  },
+  themouth888: {
+    name: 'themouth888',
+    username: 'themouth888',
+    profile: 'https://lichess.org/@/themouth888',
+    contributions: ['quiz']
   }
 };
 
@@ -31,12 +38,16 @@ for (let key in contributors) {
   let box = document.createElement('DIV');
   box.classList.add('contributor');
   box.innerHTML = `
-  <a href="${contributors[key].profile}">${contributors[key].name}</a>
+  <h1>${contributors[key].name}</h1>
+  <span>Lichess.org </span>
+  <a href="${contributors[key].profile}" target="_blank">${contributors[key].username}</a>
   <hr />
+  <p>Contributions</p>
   `;
   contributors[key].contributions.map(e=>{
     let thing = document.createElement('SPAN');
     thing.classList.add(e);
+    thing.classList.add('contribution');
     thing.innerHTML = e;
     box.append(thing);
     thing.addEventListener('click',()=>popup(e));
