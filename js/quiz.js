@@ -49,7 +49,7 @@ const quiz = {
   hsHtml: document.querySelector('.highscore'),
   popup: document.querySelector('.overlay'),
   again: document.querySelector('#playagain'),
-  time: 30,
+  time: 10,
   tHtml: document.querySelector('#time'),
   note: document.querySelector('#note'),
   start() {
@@ -92,9 +92,12 @@ const quiz = {
     if (input === this.a) {
       this.noteMsg(true);
       this.score++;
+      this.time+=3;
+      this.tHtml.innerHTML = this.time;
     } else {
       this.noteMsg(false);
-      this.score--;
+      this.time--;
+      this.tHtml.innerHTML = this.time;
     }
     this.completed++;
     this.s2Html.innerHTML = `${this.score}/${this.completed}`;
