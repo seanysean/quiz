@@ -90,12 +90,12 @@ const quiz = {
   },
   submit(input) {
     if (input === this.a) {
-      this.noteMsg(true);
+      this.noteMsg(true,'','');
       this.score++;
       this.time+=3;
       this.tHtml.innerHTML = this.time;
     } else {
-      this.noteMsg(false);
+      this.noteMsg(false,this.a,input);
       this.time--;
       this.tHtml.innerHTML = this.time;
     }
@@ -118,13 +118,14 @@ const quiz = {
     }
     this.hsHtml.innerHTML = sessionStorage.getItem('high');
   },
-  noteMsg(right) {
+  noteMsg(right,cor,ans) {
+    //cor = correct, ans = user answer.
     if (right) {
       this.note.innerHTML = 'Your previous answer was correct.';
       this.note.classList.add('green');
       this.note.classList.remove('red');
     } else {
-      this.note.innerHTML = 'Your previous answer was incorrect.';
+      this.note.innerHTML = `Your previous answer was incorrect. You selected '${ans}', but the correct answer was '${cor}'.`;
       this.note.classList.add('red');
       this.note.classList.remove('green');
     }
