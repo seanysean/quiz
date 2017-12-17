@@ -5,6 +5,7 @@ let themeSwitcher = document.createElement('SPAN');
 themeSwitcher.classList.add('fa');
 themeSwitcher.classList.add('fa-lightbulb-o');
 themeSwitcher.classList.add('theme');
+themeSwitcher.setAttribute('q-hint','Theme (t)');
 document.body.append(themeSwitcher);
 
 if (bg === null) {

@@ -12,6 +12,32 @@ body {
   color: #444;
   background: #fff;
 }
+/* q-hint */
+[q-hint] {
+  position: relative;
+  cursor: pointer;
+}
+[q-hint]::after {
+  content: attr(q-hint);
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 14px !important;
+  background: RGBa(205,205,205,0.2);
+  padding: 3px;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  transition: 0.25s ease;
+  transition-delay: 0.05s;
+  opacity: 0;
+  pointer-events: none;
+}
+[q-hint]:hover::after {
+  opacity: 1;
+}
+/* Everything else */
 .overlay {
   position: fixed;
   height: 100%;
@@ -50,7 +76,7 @@ h1 {
   font-weight: 100;
 }
 .theme {
-  display: block;
+  display: block !important;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -69,27 +95,6 @@ h1 {
 }
 .theme:hover {
   box-shadow: 0 0 10px #777;
-}
-.theme::after {
-  content: "Theme (t)";
-  position: absolute;
-  font-family: sans-serif;
-  font-size: 12px;
-  line-height: 14px !important;
-  background: RGBa(0,0,0,0.2);
-  padding: 3px;
-  height: 14px;
-  top: 110%;
-  width: 55px;
-  right: 6px;
-  border-radius: 5px;
-  transition: 0.25s ease;
-  transition-delay: 0.25s;
-  opacity: 0;
-  pointer-events: none;
-}
-.theme:hover::after {
-  opacity: 1;
 }
 button {
   background: linear-gradient(#fff,#f1f1f1);
@@ -208,8 +213,8 @@ body.dark .links a:active {
   background: RGBa(0,0,0,0.3);
   color: #fff;
 }
-body.dark .theme::after {
-  background: RGBa(205,205,205,0.2);
+body.dark [q-hint]::after {
+  background: RGBa(0,0,0,0.2);
 }
 body.dark .note.green {
   background: #337733;
